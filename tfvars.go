@@ -98,6 +98,8 @@ func (t *Tfvars) read() (map[string]interface{}, error) {
 	if err != nil {
 		return nil, fmt.Errorf("failed to open file: %s -> %w", t.path, err)
 	}
+	defer f.Close()
+
 	b, err := ioutil.ReadAll(f)
 	if err != nil {
 		return nil, fmt.Errorf("failed to read file: %s -> %w", t.path, err)
