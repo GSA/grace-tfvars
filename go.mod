@@ -1,4 +1,4 @@
-module github.com/GSA/grace-tfvars/tfvars
+module github.com/GSA/grace-tfvars
 
 go 1.16
 
